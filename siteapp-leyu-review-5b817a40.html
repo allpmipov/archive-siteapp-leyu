@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乐鱼体育 · 信息索引与场景导览</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #fafafa;
+            color: #1a1a2e;
+            line-height: 1.7;
+        }
+
+        /* 极简窄版式 */
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* 顶部导航 — 轻量分割 */
+        .top-nav {
+            padding: 28px 0 16px;
+            border-bottom: 1px solid #e6e6e6;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .top-nav .brand {
+            font-size: 1.1rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            color: #222;
+        }
+        .top-nav .brand span {
+            color: #bd8a4c;
+        }
+        .top-nav .nav-links {
+            display: flex;
+            gap: 28px;
+            font-size: 0.9rem;
+        }
+        .top-nav .nav-links a {
+            text-decoration: none;
+            color: #444;
+            transition: color 0.2s;
+        }
+        .top-nav .nav-links a:hover {
+            color: #bd8a4c;
+        }
+
+        /* hero 区 — 克制留白 */
+        .hero {
+            padding: 64px 0 48px;
+        }
+        .hero h1 {
+            font-size: 2rem;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            line-height: 1.3;
+            color: #111;
+        }
+        .hero .subhead {
+            margin-top: 18px;
+            font-size: 1.05rem;
+            color: #4a4a5a;
+            max-width: 580px;
+        }
+
+        /* 段落卡片与标题层次 */
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin: 48px 0 18px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #ddd;
+            color: #1a1a1a;
+        }
+        .section-title-sm {
+            font-size: 1.05rem;
+            font-weight: 500;
+            margin: 28px 0 10px;
+            color: #2d2d3a;
+        }
+
+        p {
+            margin-bottom: 1em;
+            color: #333;
+        }
+
+        .intro-text {
+            font-size: 0.98rem;
+        }
+
+        /* 三个场景模块 — 卡片极简 */
+        .scene-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin: 28px 0 32px;
+        }
+        .scene-card {
+            background: #ffffff;
+            padding: 20px 24px;
+            border-radius: 0;
+            border-left: 3px solid #bd8a4c;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+        }
+        .scene-card h3 {
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: #1f1f2e;
+            margin-bottom: 8px;
+        }
+        .scene-card p {
+            font-size: 0.93rem;
+            color: #3d3d4e;
+            margin-bottom: 0.2rem;
+        }
+
+        /* 常见说明 — 紧凑摘要 */
+        .faq-item {
+            margin: 16px 0;
+            padding: 14px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .faq-item:last-of-type {
+            border-bottom: none;
+        }
+        .faq-q {
+            font-weight: 500;
+            font-size: 0.98rem;
+            color: #1a1a2e;
+        }
+        .faq-a {
+            margin-top: 6px;
+            font-size: 0.93rem;
+            color: #4a4a5a;
+        }
+
+        /* 嵌入链接样式 */
+        a {
+            color: #bd8a4c;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border 0.15s;
+        }
+        a:hover {
+            border-bottom-color: #bd8a4c;
+        }
+
+        /* 底部 */
+        .footer {
+            margin-top: 64px;
+            padding: 28px 0 48px;
+            border-top: 1px solid #e6e6e6;
+            font-size: 0.8rem;
+            color: #777;
+        }
+
+        /* 响应式微调 */
+        @media (max-width: 500px) {
+            .top-nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+            .container {
+                padding: 0 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 顶部导航 -->
+        <nav class="top-nav">
+            <div class="brand"><span>◆</span> 资料索引</div>
+            <div class="nav-links">
+                <a href="#intro">概述</a>
+                <a href="#scenes">场景</a>
+                <a href="#faq">说明</a>
+            </div>
+        </nav>
+
+        <!-- hero -->
+        <section class="hero">
+            <h1>体育信息整理 · 乐鱼体育</h1>
+            <div class="subhead">
+                从资料分类与信息索引的角度，梳理内容结构、使用场景与常见疑问。
+            </div>
+        </section>
+
+        <!-- 核心介绍 -->
+        <section id="intro">
+            <div class="section-title">内容索引基础</div>
+            <p class="intro-text">
+                在体育资讯与数据整理的过程中，信息来源的条理性直接影响查阅效率。<a href="https://siteapp-leyu.com.cn">乐鱼体育</a>作为一个内容聚合方向，其资料组织方式可归纳为三级结构：赛事分类、数据记录与专题整合。下文从三个典型场景展开说明，便于快速定位所需信息。
+            </p>
+            <p class="intro-text">
+                资料索引的核心在于标签与层级：将足球、篮球等大类设为一级索引，再按联赛、赛季、球队细分为二级，同时保留跨类别的综合专题。这种结构既适合日常浏览，也便于回溯历史记录。
+            </p>
+        </section>
+
+        <!-- 三个场景模块 -->
+        <section id="scenes">
+            <div class="section-title">三个信息使用场景</div>
+            <div class="scene-grid">
+                <div class="scene-card">
+                    <h3>① 赛事资料归档</h3>
+                    <p>面向长期跟踪的联赛或杯赛，按赛季建立资料夹，包含赛程、积分、射手榜与关键比赛记录。可通过标签快速调取某一轮次或特定球队的数据。</p>
+                </div>
+                <div class="scene-card">
+                    <h3>② 专题内容整理</h3>
+                    <p>针对转会窗、青训报告、战术分析等非赛事类主题，建立独立索引夹。每一条目附带时间戳与来源链接，方便后续扩展或交叉引用。</p>
+                </div>
+                <div class="scene-card">
+                    <h3>③ 横向对比查阅</h3>
+                    <p>将不同联赛的同类数据（如进球数、控球率、球员跑动距离）并列展示，利用表格或卡片视图缩小信息差，适用于分析类场景。</p>
+                </div>
+            </div>
+            <p class="intro-text" style="margin-top: 8px;">
+                上述三个场景均以「可检索、可回溯、可重组」为原则，不依赖单一视图，使用者可根据实际需求选择查阅粒度。
+            </p>
+        </section>
+
+        <!-- 常见说明 (FAQ 摘要) -->
+        <section id="faq">
+            <div class="section-title">常见问题摘要</div>
+
+            <div class="faq-item">
+                <div class="faq-q">资料索引是否包含实时数据？</div>
+                <div class="faq-a">
+                    索引主要面向已发生的赛事与整理好的内容，不保证实时更新。如需获取即时赛况或比分，建议结合官方数据源进行交叉核实。在<a href="https://siteapp-leyu.com.cn">乐鱼体育</a>的框架下，历史数据与专题整理是更稳定的信息模块。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">如何快速定位某一支球队的赛季记录？</div>
+                <div class="faq-a">
+                    建议使用「球队 + 赛季」作为关键词在索引内搜索，或直接进入对应联赛的归档夹。如果索引中尚未收录，可手动补充该球队在该赛季的赛程与关键数据，形成完整记录。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">专题内容会定期扩充吗？</div>
+                <div class="faq-a">
+                    专题部分根据赛事周期与热点不定期扩充，例如转会窗关闭后、大赛结束后会集中整理。使用者也可以自行添加条目，保持索引的开放性和实用性。
+                </div>
+            </div>
+
+            <p style="margin-top: 24px; font-size: 0.93rem; color: #555;">
+                以上说明基于一般资料整理习惯，具体使用方式可根据个人需求调整。索引的价值在于持续维护，建议定期回顾并补充新内容。
+            </p>
+        </section>
+
+        <!-- 底部 -->
+        <footer class="footer">
+            <div>信息索引 · 内容整理参考 · 非实时数据源</div>
+            <div style="margin-top: 4px;">关于本文档的说明与结构，可参阅上方各个章节。</div>
+        </footer>
+    </div>
+</body>
+</html>
